@@ -1,0 +1,18 @@
+<div
+  class="item-wrapper border border-1 p-4 d-flex align-items-center"
+  [ngClass]="deleteClicked ? 'd-none' : ''"
+>
+  <button class="btn btn-success me-3" (click)="onClickCompleted()">
+    Completed
+  </button>
+  <button class="btn btn-danger me-3" (click)="onClickDeleted()">Delete</button>
+  <span *ngIf="clicked; then completed; else waiting"></span>
+  <ng-template #completed>
+    <span class="text-decoration-line-through h1 fst-italic">{{
+      taskName
+    }}</span>
+  </ng-template>
+  <ng-template #waiting>
+    <span class="h1 fst-italic">{{ taskName }}</span>
+  </ng-template>
+</div>

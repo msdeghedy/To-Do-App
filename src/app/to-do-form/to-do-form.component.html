@@ -1,0 +1,23 @@
+<div class="form-wrapper mb-5 p-4 border border-1">
+  <h1 class="mb-3">To DO APP</h1>
+  <p class="mb-3">Add new task!</p>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control rounded-0"
+      placeholder="Task title"
+      aria-label="task title"
+      aria-describedby="basic-addon2"
+      [(ngModel)]="taskName"
+    />
+    <div class="input-group-append ms-2">
+      <button
+        class="btn btn-outline-secondary btn-dark text-white p-2 rounded-0"
+        type="button"
+        (click)="handleClickOnAdd(taskName)"
+      >
+        ADD
+      </button>
+    </div>
+  </div>
+</div>

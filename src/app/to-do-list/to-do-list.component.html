@@ -1,0 +1,7 @@
+<div class="list-wrapper p-4 border border-1">
+  <h2 class="mb-3">Let's get some work done!</h2>
+
+  <div *ngFor="let taskName of toDoItems">
+    <app-to-doitem [taskName]="taskName"></app-to-doitem>
+  </div>
+</div>
